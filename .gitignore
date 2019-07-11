@@ -1,0 +1,4 @@
+**/environment/.terraform
+**/environment/.terraform/**
+terraform.tfstate
+terraform.tfstate.backup
