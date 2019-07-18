@@ -1,9 +1,9 @@
-resource "aws_route_table" "route-terraformexaple" {  
-  vpc_id  = "${aws_vpc.vpc-terraformexaple.id}"
+resource "aws_route_table" "route-terraformexample" {  
+  vpc_id  = "${aws_vpc.vpc-terraformexample.id}"
 
   route {
     cidr_block  = "0.0.0.0/0"
-    gateway_id  = "${aws_internet_gateway.igw-terraformexaple.id}"
+    gateway_id  = "${var.igw-id}"
   }
 
   tags = {
@@ -11,8 +11,8 @@ resource "aws_route_table" "route-terraformexaple" {
   }
 }
 
-resource "aws_route_table_association" "route-association-terraformexaple" {
+resource "aws_route_table_association" "route-association-terraformexample" {
 
-  route_table_id  = "${aws_route_table.route-terraformexaple.id}"
-  subnet_id       = "${aws_subnet.subnet-terraformexaple.id}"
+  subnet_id       = "${var.subnet-id}"
+  route_table_id  = "${aws_route_table.route-terraformexample.id}"
 }

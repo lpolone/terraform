@@ -1,7 +1,7 @@
-resource "aws_security_group" "sg-terraformexaple" {
-  name        = "terraformexaple-sg"
-  description = "sg-terraformexaple"
-  vpc_id      = "${aws_vpc.vpc-terraformexaple.id}"
+resource "aws_security_group" "sg-terraformexample" {
+  name        = "terraformexample-sg"
+  description = "sg-terraformexample"
+  vpc_id      = "${aws_vpc.vpc-terraformexample.id}"
 
   ingress {
     from_port   = 22

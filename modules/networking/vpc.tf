@@ -1,7 +1,7 @@
-resource "aws_vpc" "vpc-terraformexaple" {
+resource "aws_vpc" "vpc-terraformexample" {
   cidr_block  = "10.10.0.0/16"
  
   tags = {
-    Name = "vpc-terraformexaple"
+    Name = "vpc-terraformexample"
   }
 }
