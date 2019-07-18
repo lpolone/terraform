@@ -4,7 +4,7 @@
 echo "[TASK 1] Setting hostname"
 hostname ec2-terraformexample
 echo "ec2-terraformexample" > /etc/hostname
-echo "127.0.0.1 ec2-terraformexample" /etc/hosts
+echo "127.0.0.1 ec2-terraformexample" >> /etc/hosts
 
 # Install initial packages
 echo "[TASK 2] Installing initial packages"
