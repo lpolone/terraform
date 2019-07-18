@@ -11,14 +11,15 @@ resource "aws_instance" "ec2-terraformexample" {
   root_block_device {
     volume_size = "30"
   }
-
-  connection {
-    host        = "self.public_ip"
-    user        = "admin"
+ 
+ connection {
+    host        = "${self.public_ip}"
+    type        = "ssh"
+    user        = "ubuntu"
     private_key = "${file("kp-terraformexample.pem")}"
     timeout     = "1m"
   }
- 
+
     provisioner "file" {
     source      = "bootstrap.sh"
     destination = "/tmp/bootstrap.sh"
